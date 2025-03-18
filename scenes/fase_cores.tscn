@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsklfn2p3bx07"]
+
+[ext_resource type="Texture2D" uid="uid://burteeyqfbl0q" path="res://Art Assets/Background/background.jpeg" id="1_n1l1p"]
+[ext_resource type="PackedScene" uid="uid://dwcgpg2ycmwrh" path="res://Personagens/player1.tscn" id="2_aofcm"]
+[ext_resource type="PackedScene" uid="uid://bnxeiow6vpdw2" path="res://Personagens/inimigo1.tscn" id="3_cl77n"]
+[ext_resource type="Script" path="res://Scripts/player_cores.gd" id="3_vy1ln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2d71r"]
+size = Vector2(2562, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4uak"]
+size = Vector2(550.5, 32.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cso3s"]
+size = Vector2(39.5, 67)
+
+[node name="fase_cores" type="Node2D"]
+position = Vector2(5, -556)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 1278.0
+offset_bottom = 662.0
+texture = ExtResource("1_n1l1p")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 1259.0
+offset_top = -2.0
+offset_right = 2558.0
+offset_bottom = 662.0
+texture = ExtResource("1_n1l1p")
+
+[node name="player" parent="." instance=ExtResource("2_aofcm")]
+position = Vector2(38, 502)
+script = ExtResource("3_vy1ln")
+
+[node name="inimigo1" parent="." instance=ExtResource("3_cl77n")]
+position = Vector2(985, 556)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(635, 610)
+collision_layer = 2
+collision_mask = 5
+
+[node name="chão" type="CollisionShape2D" parent="StaticBody2D"]
+light_mask = 2
+visibility_layer = 5
+position = Vector2(641, 0)
+shape = SubResource("RectangleShape2D_2d71r")
+
+[node name="parede" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-659.001, -327.75)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_p4uak")
+
+[node name="parede2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(443, -109)
+shape = SubResource("RectangleShape2D_cso3s")
+one_way_collision_margin = 10.0

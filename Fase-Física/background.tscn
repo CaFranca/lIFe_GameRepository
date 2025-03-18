@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cng3coucl67li"]
+
+[ext_resource type="Texture2D" uid="uid://2xc08spffgbk" path="res://Img fundo 1.jpg" id="1_pfn7a"]
+
+[node name="Background" type="Parallax2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Img-fundo" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(619, 320)
+texture = ExtResource("1_pfn7a")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gpct263igih4"]
+
+[ext_resource type="Texture2D" uid="uid://0734txdvmcwu" path="res://Personagem-base.png" id="1_k4bwr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5r7k6"]
+radius = 58.0
+height = 182.0
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(464, 257)
+shape = SubResource("CapsuleShape2D_5r7k6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(461.75, 262.75)
+scale = Vector2(0.621339, 0.654812)
+texture = ExtResource("1_k4bwr")

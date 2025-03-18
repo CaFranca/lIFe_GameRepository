@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://buc11v2tl8hov"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_wewca"]
+[ext_resource type="FontFile" uid="uid://cwxyoc023a4iy" path="res://Art Assets/Fonts/Early GameBoy.ttf" id="2_37r46"]
+
+[sub_resource type="FontVariation" id="FontVariation_wvcmk"]
+base_font = ExtResource("2_37r46")
+variation_transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="CartesianPlane" type="Node2D"]
+visible = false
+texture_filter = 2
+script = ExtResource("1_wewca")
+custom_font = SubResource("FontVariation_wvcmk")
+
+[connection signal="draw" from="." to="." method="_on_draw"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4mg0vsotiswi"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_un0u8"]
+[ext_resource type="Texture2D" uid="uid://pispayunfq0k" path="res://Art Assets/Props/Egg.png" id="2_q5bg1"]
+
+[node name="Button" type="Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_un0u8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_q5bg1")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

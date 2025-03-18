@@ -1,0 +1,304 @@
+/* Cores */
+
+body {
+    background-color: #6936c1;
+    color: #070606;
+}
+
+header, nav, footer {
+    background-color: #7E57C2;
+}
+
+header h1, nav a, .section1 h2, footer a, footer h2 {
+    color: #34008d;
+}
+
+nav a:hover, footer a:hover {
+    background-color: #B39DDB;
+    color: black;
+}
+
+.section1, .item-resultado, .item-erro {
+    background-color: #784ac9;
+}
+
+.section2 button {
+    background-color: #ad8ee2;
+    color: #080000;
+}
+
+.descricao-meta {
+    color: #BDBDBD;
+}
+
+
+/* Pagina principal */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 20vh;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    height: 9vh;
+}
+
+.lupa {
+    width: 40px;
+
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 20vh;
+
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+
+nav a:hover {
+    transition: 0.3s;;
+    color: black;
+}
+
+nav a.no-hover:hover {
+    transition: 90s;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section1 {
+    margin-top: 4vh;
+    width: 200vh;
+    text-align: justify;
+    display: flex;
+    gap: 10vh;
+    padding: 1%;
+}
+
+.div1 img {
+    width: 300px;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 3%;
+}
+.div11 img{
+    width: 200px;
+}
+
+.div11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 3%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}
+
+footer a:hover{
+    transition: 0.3s;
+    color: black;
+}
+
+
+/* parte da pagina de pesquisa */
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section input {
+    width: 30rem;
+    /* Largura dos inputs */
+    border: none;
+    /* Remove a borda padrão */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 1.5rem;
+    /* Borda arredondada */
+    /* Espaçamento abaixo dos inputs */
+    color: #ffff;
+    /* Cor do texto */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    box-sizing: border-box;
+    /* Inclui padding e border na largura total */
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.2rem;
+    /* Espaçamento interno do botão */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 1.5rem;
+    /* Borda arredondada */
+    background-color: #30475E;
+    /* Cor de fundo do botão */
+    color: #5D3A9B;
+    /* Cor do texto do botão */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem;
+    /* Largura máxima da caixa de resultados */
+    height: 46vh;
+    /* Altura máxima da caixa de resultados */
+    overflow-y: auto;
+    /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem;
+    /* Espaçamento acima da caixa de resultados */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 0.6rem;
+    /* Borda arredondada */
+}
+
+.item-erro {
+    /* Cor de fundo dos itens */
+    min-width: 40%;
+    text-align: center;
+    border-radius: 0.6rem;
+    /* Borda arredondada */
+    padding: 1rem;
+    /* Espaçamento interno */
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    /* Cor de fundo dos itens */
+    min-width: 40%;
+    border-radius: 0.6rem;
+    /* Borda arredondada */
+    padding: 1rem;
+    /* Espaçamento interno */
+    margin-bottom: 1rem;
+    /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    display: flex;
+    text-align: justify;
+    gap: 2%;
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    color: #222831;
+    /* Cor do texto */
+}
+
+.item-resultado img{
+    width: 200px;
+}
+.descricao-meta {
+    color: #000000;
+    /* Cor do texto */
+    margin: 0.5rem 0;
+    /* Margem acima e abaixo */
+}
+
+/* funcão de fazer a pesquisa rolar */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.search-container img {
+    position: relative;
+    right: 42px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.search-container input {
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px white;
+    border-top: 2px solid rgb(109, 2, 112);
+    border-left: 2px solid rgb(61, 1, 66);
+    border-right: 2px solid rgb(156, 0, 91);
+    border-bottom: 2px solid rgb(51, 9, 55);
+    outline: none;
+    border-radius: 20px;
+    width: 5%;
+    opacity: 0%;
+    transition: all 1s;
+    padding: 5px;
+    padding-left: 5px;
+}
+
+.search-container p {
+    position: relative;
+    left: -19px;
+    transition: all 0.2s 0.2s ease-in-out;
+    width: fit-content;
+    flex-wrap: nowrap;
+}
+
+.search-container p:last-child {
+    left: -45px;
+}

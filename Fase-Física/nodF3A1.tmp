@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://bv7h7g3aq047o"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_vcj70"]
+[ext_resource type="Texture2D" uid="uid://2xc08spffgbk" path="res://Items Log/Img fundo 1.jpg" id="2_07ejf"]
+[ext_resource type="Script" path="res://character_body2_2d.gd" id="3_ab2bq"]
+[ext_resource type="Texture2D" uid="uid://c53hodq4ceg77" path="res://Items Log/Sprite Mario.png" id="4_7hk1m"]
+[ext_resource type="Script" path="res://background_container.gd" id="4_a2ehe"]
+[ext_resource type="Texture2D" uid="uid://c45ahm0rm5xbk" path="res://Items Log/Fundo 2.jpg" id="6_67te8"]
+[ext_resource type="Texture2D" uid="uid://37fkprendd8t" path="res://Items Log/Fundo 3.jpg" id="7_2yg76"]
+[ext_resource type="Texture2D" uid="uid://cjj7sd885yqdi" path="res://Items Log/Fundo 4.jpg" id="8_n6m8u"]
+[ext_resource type="Script" path="res://static_body_2d_2.gd" id="9_tj8k1"]
+[ext_resource type="Texture2D" uid="uid://cervq54250sfd" path="res://Plataforma-1.png" id="10_pqxit"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fy5d5"]
+radius = 8.57143
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqkj4"]
+size = Vector2(5105.5, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mts8"]
+size = Vector2(341, 148)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vcj70")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+disable_mode = 2
+script = ExtResource("3_ab2bq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(152, 545)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_7hk1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(153, 544)
+scale = Vector2(3.5, 3.5)
+shape = SubResource("CapsuleShape2D_fy5d5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2554.25, 626)
+shape = SubResource("RectangleShape2D_fqkj4")
+
+[node name="BackgroundContainer" type="ParallaxBackground" parent="."]
+script = ExtResource("4_a2ehe")
+
+[node name="Img-1" type="Sprite2D" parent="BackgroundContainer"]
+position = Vector2(644, 321)
+texture = ExtResource("2_07ejf")
+
+[node name="Img-2" type="Sprite2D" parent="BackgroundContainer"]
+position = Vector2(1922, 320)
+scale = Vector2(1, 0.501562)
+texture = ExtResource("6_67te8")
+
+[node name="Img-3" type="Sprite2D" parent="BackgroundContainer"]
+position = Vector2(3198, 317)
+scale = Vector2(1, 0.507813)
+texture = ExtResource("7_2yg76")
+
+[node name="Img-4" type="Sprite2D" parent="BackgroundContainer"]
+position = Vector2(4478, 333)
+scale = Vector2(1, 1)
+texture = ExtResource("8_n6m8u")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 272.0
+offset_top = 19.0
+offset_right = 950.0
+offset_bottom = 265.0
+text = "Questao 1
+Qual o conceito de antropia?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+script = ExtResource("9_tj8k1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1834, 424)
+shape = SubResource("RectangleShape2D_1mts8")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(1830, 433)
+scale = Vector2(0.261417, 0.231239)
+texture = ExtResource("10_pqxit")
+
+[node name="Timer" type="Timer" parent="StaticBody2D2"]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="StaticBody2D2/Timer" to="." method="_on_timer_timeout"]

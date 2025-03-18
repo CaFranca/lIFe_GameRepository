@@ -1,0 +1,464 @@
+[gd_scene load_steps=31 format=3 uid="uid://bv7h7g3aq047o"]
+
+[ext_resource type="Script" uid="uid://bpnb4nyfgv3ea" path="res://node_2d.gd" id="1_vcj70"]
+[ext_resource type="Texture2D" uid="uid://2xc08spffgbk" path="res://Img fundo 1.jpg" id="2_07ejf"]
+[ext_resource type="Script" uid="uid://xhtva6ne7671" path="res://character_body2_2d.gd" id="3_ab2bq"]
+[ext_resource type="Texture2D" uid="uid://dwofppnin08ar" path="res://Plataforma-1.png" id="3_rm0q8"]
+[ext_resource type="Texture2D" uid="uid://0734txdvmcwu" path="res://Personagem-base.png" id="6_smej0"]
+[ext_resource type="Script" uid="uid://b47xlkoy0jlyt" path="res://abertura.gd" id="7_2g31k"]
+[ext_resource type="Script" uid="uid://dphwt5mcmqr50" path="res://respostas_speed.gd" id="7_eoabb"]
+[ext_resource type="Script" uid="uid://kvuyjqxe6bv3" path="res://area_2d.gd" id="7_fuisb"]
+[ext_resource type="Script" uid="uid://djohuc2fbmd75" path="res://questao_2_speed.gd" id="9_d6bn6"]
+[ext_resource type="Script" uid="uid://dd7atinffkxpn" path="res://plataforma_2.gd" id="10_oedwl"]
+[ext_resource type="Script" uid="uid://6tpym1nc1fjg" path="res://questao_3_speed.gd" id="11_dbfed"]
+[ext_resource type="Script" uid="uid://bjq1f7dtn6edk" path="res://questao_4_speed.gd" id="12_8qrty"]
+[ext_resource type="Script" uid="uid://bag1rjx15k3s6" path="res://questao_5_speed.gd" id="13_h8dut"]
+[ext_resource type="PackedScene" uid="uid://dxmcnhek66che" path="res://Animation.tscn" id="14_1r7jh"]
+[ext_resource type="Script" uid="uid://bnm8ta80jyb7r" path="res://questao_6_speed.gd" id="14_3mprw"]
+[ext_resource type="PackedScene" uid="uid://dgvmhj6140jdc" path="res://animation-jump.tscn" id="15_rvmp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqkj4"]
+size = Vector2(10699.7, 38)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fy5d5"]
+radius = 13.4286
+height = 31.4286
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl314"]
+size = Vector2(244, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0003j"]
+size = Vector2(269, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tib57"]
+size = Vector2(191, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exkpx"]
+size = Vector2(268, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uihd4"]
+size = Vector2(177, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3dfj"]
+size = Vector2(263, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtkqr"]
+size = Vector2(195, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68rry"]
+size = Vector2(264, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ficug"]
+size = Vector2(385, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl3d"]
+size = Vector2(261, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptoh3"]
+size = Vector2(426, 91.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81irc"]
+size = Vector2(262, 62)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vcj70")
+
+[node name="ParallaxBackground" type="Node2D" parent="."]
+z_index = -1
+
+[node name="ParallaxLayer" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.64, 0.8)
+scroll_offset = Vector2(-135, 6)
+repeat_size = Vector2(1150, 0)
+autoscroll = Vector2(1, 0)
+repeat_times = 15
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(889, 345.5)
+scale = Vector2(1.16562, 1.53281)
+texture = ExtResource("2_07ejf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5351.13, 780)
+shape = SubResource("RectangleShape2D_fqkj4")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
+disable_mode = 2
+script = ExtResource("3_ab2bq")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+z_index = 2
+position = Vector2(834, 374)
+limit_top = -120
+limit_smoothed = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(266, 685)
+scale = Vector2(0.527161, 0.474891)
+texture = ExtResource("6_smej0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(266, 687)
+scale = Vector2(3.5, 3.5)
+shape = SubResource("CapsuleShape2D_fy5d5")
+
+[node name="Abertura" type="Label" parent="."]
+offset_left = 163.0
+offset_top = -57.0
+offset_right = 1490.0
+offset_bottom = 346.0
+theme_override_font_sizes/font_size = 35
+text = "Bem vindo! Essa é a fase 2 e testará seus conhecimentos sobre física!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_2g31k")
+
+[node name="Questao-1_speed" type="Node2D" parent="."]
+script = ExtResource("7_eoabb")
+
+[node name="Resposta-errada" type="Label" parent="Questao-1_speed"]
+offset_left = 2144.0
+offset_top = 384.0
+offset_right = 2546.0
+offset_bottom = 533.0
+theme_override_font_sizes/font_size = 25
+text = "Entropia é a capacidade do cérebro humano de organizar pensamentos de forma lógica e clara."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D" type="Area2D" parent="Questao-1_speed" groups=["Player"]]
+position = Vector2(2144, 384)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-1_speed/Area2D"]
+position = Vector2(198, 68.5)
+shape = SubResource("RectangleShape2D_sl314")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Questao-1_speed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-1_speed/StaticBody2D"]
+position = Vector2(2341.5, 583)
+shape = SubResource("RectangleShape2D_0003j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-1_speed/StaticBody2D"]
+position = Vector2(2342, 593)
+scale = Vector2(0.209842, 0.149651)
+texture = ExtResource("3_rm0q8")
+
+[node name="Resposta-certa" type="Label" parent="Questao-1_speed"]
+anchors_preset = -1
+anchor_top = -8.391
+anchor_right = 12.606
+offset_left = 2122.0
+offset_top = 588.0
+offset_right = 2567.0
+offset_bottom = 779.0
+theme_override_font_sizes/font_size = 25
+text = "Entropia é a medida da desordem em um sistema; quanto maior a entropia, mais desorganizado ele é."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Questao-1" type="Label" parent="Questao-1_speed"]
+offset_left = 1989.0
+offset_top = -21.0
+offset_right = 2667.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 1
+Qual o conceito de entropia?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Questao-2_speed" type="Node2D" parent="."]
+script = ExtResource("9_d6bn6")
+
+[node name="Resposta-errada" type="Label" parent="Questao-2_speed"]
+offset_left = 3863.0
+offset_top = 640.0
+offset_right = 3979.0
+offset_bottom = 731.0
+theme_override_font_sizes/font_size = 30
+text = "Watt"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D" type="Area2D" parent="Questao-2_speed"]
+position = Vector2(3863, 640)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-2_speed/Area2D"]
+position = Vector2(63.5, 41.5)
+shape = SubResource("RectangleShape2D_tib57")
+
+[node name="resposta-certa" type="Label" parent="Questao-2_speed"]
+offset_left = 3868.0
+offset_top = 408.0
+offset_right = 3975.0
+offset_bottom = 473.0
+theme_override_font_sizes/font_size = 30
+text = "Joule
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Questao-2" type="Label" parent="Questao-2_speed"]
+offset_left = 3544.0
+offset_top = -22.0
+offset_right = 4230.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 2
+Qual é a unidade de medida de trabalho na física?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Plataforma_2" type="StaticBody2D" parent="Questao-2_speed"]
+script = ExtResource("10_oedwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-2_speed/Plataforma_2"]
+position = Vector2(3918, 595)
+shape = SubResource("RectangleShape2D_exkpx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-2_speed/Plataforma_2"]
+position = Vector2(3918, 601)
+scale = Vector2(0.209842, 0.142234)
+texture = ExtResource("3_rm0q8")
+
+[node name="Questao-3_speed" type="Node2D" parent="."]
+script = ExtResource("11_dbfed")
+
+[node name="resposta-errada" type="Label" parent="Questao-3_speed"]
+offset_left = 5075.0
+offset_top = 642.0
+offset_right = 5354.0
+offset_bottom = 742.0
+theme_override_font_sizes/font_size = 30
+text = " 8,9 m/s²"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="Questao-3_speed"]
+position = Vector2(5075, 642)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-3_speed/Area2D"]
+position = Vector2(138.5, 49.5)
+shape = SubResource("RectangleShape2D_uihd4")
+
+[node name="Questao--3" type="Label" parent="Questao-3_speed"]
+offset_left = 4800.0
+offset_top = -44.0
+offset_right = 5649.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 3
+Qual é a aceleração de um objeto em queda livre na Terra?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resposta-certa" type="Label" parent="Questao-3_speed"]
+offset_left = 5083.0
+offset_top = 423.0
+offset_right = 5341.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 30
+text = "9,8 m/s²"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Questao-3_speed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-3_speed/StaticBody2D"]
+position = Vector2(5209, 597.5)
+shape = SubResource("RectangleShape2D_y3dfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-3_speed/StaticBody2D"]
+position = Vector2(5208.06, 601.969)
+scale = Vector2(0.207775, 0.139725)
+texture = ExtResource("3_rm0q8")
+
+[node name="Questao-4_speed" type="Node2D" parent="."]
+script = ExtResource("12_8qrty")
+
+[node name="Resposta-errada" type="Label" parent="Questao-4_speed"]
+offset_left = 6754.0
+offset_top = 418.0
+offset_right = 6972.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 30
+text = "Diminui"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D" type="Area2D" parent="Questao-4_speed"]
+position = Vector2(6754, 418)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-4_speed/Area2D"]
+position = Vector2(103, 47)
+shape = SubResource("RectangleShape2D_xtkqr")
+
+[node name="Resposta-certa" type="Label" parent="Questao-4_speed"]
+offset_left = 6756.0
+offset_top = 637.0
+offset_right = 6966.0
+offset_bottom = 746.0
+theme_override_font_sizes/font_size = 30
+text = "Aumenta
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Questao-4_speed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-4_speed/StaticBody2D"]
+position = Vector2(6864, 601)
+shape = SubResource("RectangleShape2D_68rry")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-4_speed/StaticBody2D"]
+position = Vector2(6865, 603)
+scale = Vector2(0.209842, 0.137435)
+texture = ExtResource("3_rm0q8")
+
+[node name="Questao-4" type="Label" parent="Questao-4_speed"]
+offset_left = 6420.0
+offset_top = -125.0
+offset_right = 7287.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 4
+O que acontece com a energia potencial de um objeto quando ele é elevado a uma maior altura?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Questao-5_speed" type="Node2D" parent="."]
+script = ExtResource("13_h8dut")
+
+[node name="Resposta-errada" type="Label" parent="Questao-5_speed"]
+offset_left = 8138.0
+offset_top = 598.0
+offset_right = 8547.0
+offset_bottom = 771.0
+theme_override_font_sizes/font_size = 30
+text = "Deve aumentar 1,5 vezes"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Area2D" type="Area2D" parent="Questao-5_speed"]
+position = Vector2(8138, 598)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-5_speed/Area2D"]
+position = Vector2(202.5, 84.5)
+shape = SubResource("RectangleShape2D_ficug")
+
+[node name="Questao-5" type="Label" parent="Questao-5_speed"]
+offset_left = 7825.0
+offset_top = -91.0
+offset_right = 8833.0
+offset_bottom = 282.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 5
+Para dobrar a energia cinética de um objeto em movimento, o que deve acontecer com sua velocidade?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Resposta-certa" type="Label" parent="Questao-5_speed"]
+offset_left = 8203.0
+offset_top = 372.0
+offset_right = 8491.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 30
+text = "Deve dobrar"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Questao-5_speed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-5_speed/StaticBody2D"]
+position = Vector2(8336, 588)
+shape = SubResource("RectangleShape2D_sgl3d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-5_speed/StaticBody2D"]
+position = Vector2(8336, 596)
+scale = Vector2(0.206299, 0.154887)
+texture = ExtResource("3_rm0q8")
+
+[node name="Questao-6_speed" type="Node2D" parent="."]
+script = ExtResource("14_3mprw")
+
+[node name="Resposta-errada" type="Label" parent="Questao-6_speed"]
+offset_left = 9848.0
+offset_top = 611.0
+offset_right = 10222.0
+offset_bottom = 762.0
+theme_override_font_sizes/font_size = 30
+text = "Igual à velocidade inicial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="Questao-6_speed"]
+position = Vector2(9848, 611)
+script = ExtResource("7_fuisb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-6_speed/Area2D"]
+position = Vector2(203, 76)
+shape = SubResource("RectangleShape2D_ptoh3")
+
+[node name="Questao-6" type="Label" parent="Questao-6_speed"]
+offset_left = 9566.0
+offset_top = -149.0
+offset_right = 10431.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 30
+text = "Questao 6
+Quando uma bola é lançada verticalmente para cima, qual é a velocidade da bola no ponto mais alto de sua trajetória?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Resposta-certa" type="Label" parent="Questao-6_speed"]
+offset_left = 9898.0
+offset_top = 414.0
+offset_right = 10126.0
+offset_bottom = 472.0
+theme_override_font_sizes/font_size = 30
+text = "Zero"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Questao-6_speed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questao-6_speed/StaticBody2D"]
+position = Vector2(10031, 591)
+shape = SubResource("RectangleShape2D_81irc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Questao-6_speed/StaticBody2D"]
+position = Vector2(10028, 598)
+scale = Vector2(0.205905, 0.169066)
+texture = ExtResource("3_rm0q8")
+
+[node name="Node2D" parent="." instance=ExtResource("14_1r7jh")]
+
+[node name="Node2D2" parent="." instance=ExtResource("15_rvmp4")]
+
+[connection signal="body_entered" from="Questao-1_speed/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Questao-2_speed/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Questao-3_speed/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Questao-4_speed/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Questao-5_speed/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Questao-6_speed/Area2D" to="." method="_on_area_2d_body_entered"]

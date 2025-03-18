@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playnet Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagens/logo1.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <img src="Imagens/logo.png" alt="Logo do jogo" class="logo">
+        <h1>Playnet Adventure</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">História</a></li>
+            <li><a href="#section2">Personagem</a></l1>
+            <li><a href="#section3">Desenvolvimento</a></li>
+            <li><a href="#fooster">Como jogar</a></li>
+            <a href="index.html" class="no-hover"><img src="Imagens/home.png" alt="Home" class="lupa"></a>
+        </ul>
+    </nav>
+    <main>
+
+        <section class="section2">
+            <div class="search-container">
+                <div class="search-container">
+                    <p>Faça su</p>
+                    <input type="text" placeholder="Digite o deseja buscar" id="campo-pesquisa"><img
+                        src="Imagens/IMG-20241010-WA0014-removebg-preview.png" alt="" />
+                    <p>busca</p>
+                    <button onclick="pesquisar()">Pesquisar</button>
+                </div>
+            </div>
+        </section>
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+    </main>
+    <footer id="footer">
+        <h2>Baixe o jogo</h2>
+        <a href="Playnet_Adventure.exe" download="playnet_adventure.exe">Clique aqui  para Windows</a>
+    </footer>
+</body>
+<script src="dados.js"></script>
+<script src="app.js"></script>
+
+</html>
