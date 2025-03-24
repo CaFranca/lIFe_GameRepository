@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgrfmwpftis5u"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_vewib"]
+[ext_resource type="Resource" uid="uid://dp056kkrobne5" path="res://inventario/itens/garrafa.tres" id="2_dpuc1"]
+[ext_resource type="Texture2D" uid="uid://ch3u02nae4pkk" path="res://novos sprites/inventario/garrafa-de-agua (2).png" id="2_xhh0b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wgt7"]
+size = Vector2(7, 14)
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource("1_vewib")
+itemRes = ExtResource("2_dpuc1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(57, 37)
+texture = ExtResource("2_xhh0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56.5, 37)
+shape = SubResource("RectangleShape2D_5wgt7")

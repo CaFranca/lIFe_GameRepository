@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItensInventario" load_steps=3 format=3 uid="uid://8qhoyqddoy6p"]
+
+[ext_resource type="Script" path="res://inventario/itensinventario.gd" id="1_ah4li"]
+[ext_resource type="Texture2D" uid="uid://orlq8m880gb8" path="res://novos sprites/inventario/carteira.png" id="2_gwf6q"]
+
+[resource]
+script = ExtResource("1_ah4li")
+nome = "carteira"
+textura = ExtResource("2_gwf6q")

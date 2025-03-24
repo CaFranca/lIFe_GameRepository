@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgs65twouuqw"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_dpmm7"]
+[ext_resource type="Resource" uid="uid://dxfmp6xasmlpr" path="res://inventario/itens/livro.tres" id="2_35qrd"]
+[ext_resource type="Texture2D" uid="uid://b6jqehl22yx1d" path="res://novos sprites/inventario/livro(3).png" id="2_vt1x4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygkix"]
+size = Vector2(15.875, 10.0625)
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource("1_dpmm7")
+itemRes = ExtResource("2_35qrd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40.5, 27.5)
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("2_vt1x4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.0625, 26.9688)
+shape = SubResource("RectangleShape2D_ygkix")

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b68bpaunvxiop"]
+
+[ext_resource type="Script" path="res://Missoes/pendrive_missao.gd" id="1_1n7jt"]
+[ext_resource type="Texture2D" uid="uid://cji77847c5sa1" path="res://novos sprites/pendrive da miyuki.png" id="1_i2msw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8826v"]
+atlas = ExtResource("1_i2msw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwyuc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8826v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5rcj"]
+size = Vector2(26, 16)
+
+[node name="pendrive_missao" type="Area2D"]
+script = ExtResource("1_1n7jt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kwyuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_n5rcj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

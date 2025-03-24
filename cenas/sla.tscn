@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxadaaa7yy6hm"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_5insq"]
+[ext_resource type="Texture2D" uid="uid://cpj7r74b42nmd" path="res://novos sprites/inventario/kit-faca(1).png" id="2_1hrdw"]
+[ext_resource type="Resource" uid="uid://bqfgyv1o6ama0" path="res://inventario/itens/kit-faca.tres" id="2_4lqrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ar2k6"]
+resource_local_to_scene = true
+size = Vector2(8, 12)
+
+[node name="coletavel" type="Area2D"]
+position = Vector2(40, 24)
+script = ExtResource("1_5insq")
+itemRes = ExtResource("2_4lqrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ar2k6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_1hrdw")

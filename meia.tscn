@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://btxonpebqhs3y"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_mjdda"]
+[ext_resource type="Resource" uid="uid://dsegyt7uldrqc" path="res://inventario/itens/meia.tres" id="2_e6rgd"]
+[ext_resource type="Texture2D" uid="uid://egep284gksje" path="res://novos sprites/inventario/meia (2).png" id="2_x8a8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tidc1"]
+size = Vector2(10, 17)
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource("1_mjdda")
+itemRes = ExtResource("2_e6rgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(37, 28)
+texture = ExtResource("2_x8a8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36, 28.5)
+shape = SubResource("RectangleShape2D_tidc1")

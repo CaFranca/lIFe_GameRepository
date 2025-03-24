@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tk6hpmxdkdyc"]
+
+[ext_resource type="AudioStream" uid="uid://cia6u0qo2qian" path="res://audios/An Ugly Heart But It does Beats.mp3" id="1_i1k7f"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_i1k7f")
+volume_db = -24.425
+autoplay = true

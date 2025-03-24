@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://c620qj7tocqxg"]
+
+[ext_resource type="Script" path="res://scripts/adrianoricardotscn.gd" id="1_ridtj"]
+[ext_resource type="Texture2D" uid="uid://ll2swwisnd8x" path="res://Missoes/adriano-ricardo(1).png" id="2_2nsj6"]
+[ext_resource type="PackedScene" uid="uid://bnj4luwe8p8ds" path="res://cenas/interação_area.tscn" id="3_qe7f1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkh8j"]
+radius = 14.8661
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1a8a"]
+atlas = ExtResource("2_2nsj6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_drju2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1a8a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="npcrandom" type="Node2D"]
+script = ExtResource("1_ridtj")
+
+[node name="interação_area" parent="." instance=ExtResource("3_qe7f1")]
+"nome_da_ação" = "Interagir"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interação_area"]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_dkh8j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_drju2")

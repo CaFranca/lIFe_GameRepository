@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5kpe4eeytume"]
+
+[ext_resource type="Script" path="res://scripts/gaybriel.gd" id="1_mxudu"]
+[ext_resource type="PackedScene" uid="uid://bnj4luwe8p8ds" path="res://cenas/interação_area.tscn" id="2_kl1aa"]
+[ext_resource type="Texture2D" uid="uid://cagq2aclb2clf" path="res://Missoes/gabriel.png" id="3_d5810"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nbkyx"]
+radius = 14.8661
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjtmi"]
+atlas = ExtResource("3_d5810")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apxj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjtmi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="npcrandom" type="Node2D"]
+script = ExtResource("1_mxudu")
+
+[node name="interação_area" parent="." instance=ExtResource("2_kl1aa")]
+"nome_da_ação" = "Interagir"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interação_area"]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_nbkyx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_apxj4")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItensInventario" load_steps=3 format=3 uid="uid://dp056kkrobne5"]
+
+[ext_resource type="Script" path="res://inventario/itensinventario.gd" id="1_ojmid"]
+[ext_resource type="Texture2D" uid="uid://ch3u02nae4pkk" path="res://novos sprites/inventario/garrafa-de-agua (2).png" id="2_i8lvp"]
+
+[resource]
+script = ExtResource("1_ojmid")
+nome = "garrafa"
+textura = ExtResource("2_i8lvp")

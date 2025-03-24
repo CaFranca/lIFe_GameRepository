@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsytfnb0ofgfh"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_nj6md"]
+[ext_resource type="Texture2D" uid="uid://c5ujmttacmbrf" path="res://novos sprites/inventario/guarda-chuva(3).png" id="2_bsbko"]
+[ext_resource type="Resource" uid="uid://crvmfs8sd2lf3" path="res://inventario/itens/guarda-chuva.tres" id="2_lxtss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtewh"]
+size = Vector2(19, 18.5)
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource("1_nj6md")
+itemRes = ExtResource("2_lxtss")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(67.5, 33.5)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("2_bsbko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(67.5, 32.75)
+shape = SubResource("RectangleShape2D_jtewh")

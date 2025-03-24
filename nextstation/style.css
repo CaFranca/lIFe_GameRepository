@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 65px;
+    padding: 20px;
+    top: 0;
+    background-color: #006391;
+    font-family:"Jersey 20", sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.fundo1 {
+    width: 100%;
+    height: 500px;
+    background-color: #d48064;
+    background-image: linear-gradient(to bottom, #057cb3, #d48064);
+    text-align: center;
+}
+
+.fundo-inicial {
+    background-color: #eadba2;
+    background-image: linear-gradient(to bottom, #eadba2, #67d4d4);
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.imagem-inicial {
+    width: 100%;
+}
+
+.conteudo1 p {
+    margin-top: 20px;
+    color:#002a3d;
+}
+
+
+.fundo-processo {
+    width: 100%;
+    height: 500px;
+    background-color: #87b6e2;
+    background-image: linear-gradient(to bottom, #a2c7ea, #87b6e2);
+    text-align: center;
+}
+
+.fundo2 {
+    background-color: #4f8ac0;
+    background-image: linear-gradient(to bottom, #87b6e2, #67d4d4, #4ab4b4, #4a81b4);
+    width: 100%;
+    height: 4130px;
+    text-align: center;
+}
+
+.titulo1 {
+    padding-top:50px;
+
+}
+
+.conteudo1 {
+    width: 800px;
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+h1, p {
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: #002a3d;
+}
+
+.conteudo2 p {
+    width: 800px;
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: justify;
+    color: #002a3d;
+}
+
+.fundo-jogue {
+    width: 100%;
+    height: 100%;
+    background-color: #7b61b9;
+    background-image: linear-gradient(to bottom, #057cb3, #7b61b9);
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo-botao {
+    height: 500px;
+    width: 1000px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: #063347;
+    background-image: linear-gradient(to bottom, #115f83, #063347);
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-jogue {
+    margin-top: 50px;
+    font-family:"Jersey 20", sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.trem {
+    height: 250px;
+}
+
+.fundo-botao, p {
+    font-family: "Noto Sans", sans-serif;
+    color: white;
+    font-size: 16px;
+    margin-top: -32px;
+}
+
+.botao {
+    margin-top: 32px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: "Jersey 20", sans-serif;
+    font-size: 24px;
+    height: 60px;
+    width: 200px;
+    background-color: #042230;
+    background-image: linear-gradient(to bottom, #0d4863, #042230);
+    cursor: pointer;
+}
+
+.processo-img {
+    width: 700px;
+    margin-top: 20px;
+}
+
+.pagina {
+    margin: 20px 150px;
+}
+
+.pessoa {
+    border: solid 2px #6491d4;
+    height: 300px;
+    margin-bottom: 32px;
+    display: flex;
+}
+
+.foto {
+    height: 250px;
+    margin: 25px 0 25px 50px;
+}
+
+.nome {
+    margin: 25px 0 25px 25px;
+}
+
+.descricao {
+    color: #042230;
+    margin: 25px 25px 25px 25px;
+    text-align: left;
+}
+
+.manual-body{
+    background-image:url(./manual-wallpaper.jpg);
+    background-size: cover
+}
+
+
+
+.manual {
+    text-align: center;
+}
+
+.titulo-manual {
+    padding-top: 24px;
+}
+
+.titulo-manual, h2 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.conteudo {
+    margin: 32px 80px;
+}
+
+.conteudo p {
+    color: #042230;
+    font-size: 18px;
+}
+
+.andar, .inventario, .interagir {
+    display: flex;
+    height: 200px;
+    border: solid 2px #1d1f7c;
+    margin-bottom: 24px;
+    background-color: rgba(17, 95, 131, 0.3);
+}
+
+.setinhas, .wasd, .i, {
+    height: 180px;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.espaco {
+    height: 180px;
+    margin: 10px;
+}
+
+.andar p, .inventario p, .interagir p {
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: 32px;
+}

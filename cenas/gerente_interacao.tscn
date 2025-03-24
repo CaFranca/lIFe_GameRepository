@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3jkotfno3xx0"]
+
+[ext_resource type="Script" path="res://scripts/gerente_interacao.gd" id="1_ellsw"]
+[ext_resource type="FontFile" uid="uid://d3hdid8ri5ej0" path="res://Fontes/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans-Bold.ttf" id="2_rw3h2"]
+
+[node name="Gerente_interação" type="Node2D"]
+script = ExtResource("1_ellsw")
+
+[node name="Label" type="Label" parent="."]
+z_index = 30
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_right = 65.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_rw3h2")
+text = "[E] Para Interagir"
+horizontal_alignment = 1
+vertical_alignment = 1

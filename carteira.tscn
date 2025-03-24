@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://wb423mfkrysm"]
+
+[ext_resource type="Script" path="res://scripts/coletavel.gd" id="1_uw7se"]
+[ext_resource type="Resource" uid="uid://8qhoyqddoy6p" path="res://inventario/itens/carteira.tres" id="2_weif1"]
+[ext_resource type="Texture2D" uid="uid://orlq8m880gb8" path="res://novos sprites/inventario/carteira.png" id="3_aho2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45r2y"]
+size = Vector2(10, 9.5)
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource("1_uw7se")
+itemRes = ExtResource("2_weif1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(58.5, 37.5)
+scale = Vector2(0.78125, 0.78125)
+texture = ExtResource("3_aho2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, 36.25)
+shape = SubResource("RectangleShape2D_45r2y")

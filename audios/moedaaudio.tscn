@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgylfv34s003s"]
+
+[ext_resource type="AudioStream" uid="uid://deqcixi2tayr4" path="res://audios/money-pickup-2-89563.mp3" id="1_dwt3l"]
+
+[node name="moedaaudio" type="Node2D"]
+
+[node name="moedaaudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_dwt3l")

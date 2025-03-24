@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItensInventario" load_steps=3 format=3 uid="uid://7svv4eqxdcxc"]
+
+[ext_resource type="Script" path="res://inventario/itensinventario.gd" id="1_7c0eb"]
+[ext_resource type="Texture2D" uid="uid://cji77847c5sa1" path="res://novos sprites/pendrive da miyuki.png" id="2_ujl83"]
+
+[resource]
+script = ExtResource("1_7c0eb")
+nome = "pendrive"
+textura = ExtResource("2_ujl83")

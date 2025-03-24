@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjav53i3wwair"]
+
+[ext_resource type="Script" path="res://scripts/caixa_dialogo.gd" id="1_ioye7"]
+[ext_resource type="Texture2D" uid="uid://dgsjfonvd0q1i" path="res://Dialogo/dialogue_box.png" id="2_xb3wb"]
+[ext_resource type="FontFile" uid="uid://d3hdid8ri5ej0" path="res://Fontes/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans-Bold.ttf" id="3_n4gyq"]
+
+[node name="Caixa_dialogo" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ioye7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_xb3wb")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_n4gyq")
+vertical_alignment = 1
+
+[node name="Letras_aparecendo" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Letras_aparecendo" to="." method="_on_letras_aparecendo_timeout"]

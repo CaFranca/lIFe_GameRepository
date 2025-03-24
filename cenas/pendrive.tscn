@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://n2yukhlsyt6n"]
+
+[ext_resource type="PackedScene" uid="uid://cxadaaa7yy6hm" path="res://cenas/sla.tscn" id="1_pxgu6"]
+[ext_resource type="Texture2D" uid="uid://cji77847c5sa1" path="res://novos sprites/pendrive da miyuki.png" id="2_fcyrm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8t1f"]
+resource_local_to_scene = true
+size = Vector2(5, 3)
+
+[node name="pendrive" instance=ExtResource("1_pxgu6")]
+position = Vector2(29, 13)
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("RectangleShape2D_v8t1f")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(-2, -1)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_fcyrm")

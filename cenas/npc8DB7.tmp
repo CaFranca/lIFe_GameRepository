@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://xyv130iwclhk"]
+
+[ext_resource type="Script" path="res://scripts/npcteste.gd" id="1_23yx7"]
+[ext_resource type="Texture2D" uid="uid://cpkq7dmw2pqj7" path="res://assento preferencial.png" id="1_dub8v"]
+[ext_resource type="PackedScene" uid="uid://bnj4luwe8p8ds" path="res://cenas/interação_area.tscn" id="2_kh06t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy0lx"]
+atlas = ExtResource("1_dub8v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7h3li"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy0lx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkh8j"]
+radius = 14.8661
+
+[node name="npcrandom" type="Node2D"]
+script = ExtResource("1_23yx7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7h3li")
+
+[node name="interação_area" parent="." instance=ExtResource("2_kh06t")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interação_area"]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_dkh8j")

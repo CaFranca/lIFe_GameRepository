@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://xh7skdhkdfab"]
+
+[ext_resource type="Script" path="res://scripts/GerenteInteracao.gd" id="1_a6m53"]
+[ext_resource type="FontFile" uid="uid://4uc4yyl1n5xy" path="res://interação/Pixeloid_Font_0_5/TrueType (.ttf)/PixeloidSans-Bold.ttf" id="2_srm64"]
+
+[node name="Gerente_Interação" type="Node2D"]
+script = ExtResource("1_a6m53")
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.5
+offset_right = 66.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_srm64")
+text = "Interage ai vai [E]"
+horizontal_alignment = 1
+vertical_alignment = 1

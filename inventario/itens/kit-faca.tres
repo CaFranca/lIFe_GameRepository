@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItensInventario" load_steps=3 format=3 uid="uid://bqfgyv1o6ama0"]
+
+[ext_resource type="Script" path="res://inventario/itensinventario.gd" id="1_chpie"]
+[ext_resource type="Texture2D" uid="uid://cpj7r74b42nmd" path="res://novos sprites/inventario/kit-faca(1).png" id="2_85vmv"]
+
+[resource]
+script = ExtResource("1_chpie")
+nome = "kit-faca"
+textura = ExtResource("2_85vmv")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItensInventario" load_steps=3 format=3 uid="uid://xdmpnixbuq2y"]
+
+[ext_resource type="Script" path="res://inventario/itensinventario.gd" id="1_iv7uv"]
+[ext_resource type="Texture2D" uid="uid://cl7mudrnvpahg" path="res://novos sprites/fones de ouvido.png" id="2_wjpxx"]
+
+[resource]
+script = ExtResource("1_iv7uv")
+nome = "fones"
+textura = ExtResource("2_wjpxx")

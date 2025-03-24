@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmv48pgapfds2"]
+
+[ext_resource type="PackedScene" uid="uid://dmv48pgapfds2" path="res://cenas/npcdeteste.tscn" id="1_naek3"]
+
+[node name="Node2D" instance=ExtResource("1_naek3")]
