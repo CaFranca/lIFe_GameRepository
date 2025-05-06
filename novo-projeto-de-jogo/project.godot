@@ -13,7 +13,7 @@ config_version=5
 config/name="Novo Projeto de Jogo"
 run/main_scene="uid://c1wnivq7ncgn5"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://clodoh4sndb1s"
 
 [display]
 

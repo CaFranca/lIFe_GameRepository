@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b884bxtrr5i4d"]
+
+[ext_resource type="Texture2D" uid="uid://mbd4ruk6r612" path="res://assets/terrain/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_6h4um"]
+
+[node name="movingPlataform" type="Node2D"]
+
+[node name="plataform" type="AnimatableBody2D" parent="."]
+
+[node name="plataforma" type="Sprite2D" parent="plataform"]
+texture = ExtResource("1_6h4um")
+region_enabled = true
+region_rect = Rect2(48, 15, 48, 28)
