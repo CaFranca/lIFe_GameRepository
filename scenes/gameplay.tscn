@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8quaugkapyry"]
+
+[ext_resource type="Script" uid="uid://c3sl6jwbqyvyi" path="res://scripts/Show_Operations.gd" id="1_00tan"]
+[ext_resource type="Texture2D" uid="uid://c4ikplght8awa" path="res://assets/Free Pixel Art Forest/Preview/Background.png" id="1_7biu0"]
+[ext_resource type="Script" uid="uid://d1emvf3g8jpj" path="res://scripts/operation_generator.gd" id="2_l1v76"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l1v76"]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_00tan")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(664.5, 549.5)
+scale = Vector2(1.42134, 1.38588)
+texture = ExtResource("1_7biu0")
+
+[node name="OperationGenerator" type="Node2D" parent="."]
+position = Vector2(469, 419.5)
+script = ExtResource("2_l1v76")
+
+[node name="QuestionLabel" type="Label" parent="."]
+offset_left = 1452.0
+offset_top = 70.0
+offset_right = 1492.0
+offset_bottom = 93.0
+scale = Vector2(7.04, 2.68)
+
+[node name="InputField" type="LineEdit" parent="."]
+offset_left = 1493.0
+offset_top = 795.0
+offset_right = 1561.56
+offset_bottom = 826.0
+scale = Vector2(2.31579, 2.0303)
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = 1505.0
+offset_top = 866.0
+offset_right = 1566.0
+offset_bottom = 897.0
+scale = Vector2(2.31579, 2.0303)
+text = "Enviar"
+icon = SubResource("ViewportTexture_l1v76")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
