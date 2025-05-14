@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="Novo Projeto de Jogo"
+run/main_scene="uid://c1wnivq7ncgn5"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://clodoh4sndb1s"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/vsync/vsync_mode=2
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
